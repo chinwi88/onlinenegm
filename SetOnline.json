@@ -1,10 +1,95 @@
-{
-    "serverstatus":"true",
-    "noticemode":"true",
-    "dataclearmode":"false",
-    "servermeassage":"Wait We Are Working On a new Update ! @StoPhMods",
-    "opentime":" Wait For Some Time ⚡",
-    "libs":"https://github.com/chinwi88/onlinenegm/raw/refs/heads/main/libstophrim.zip",
-    "notice_title":"Welcome To Vip Mod",
-    "notice_body":"@StoPhMods"
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Notice</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: ;
+      padding: ;
+    }
+
+    .welcome-banner {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 320px;
+      background: linear-gradient(135deg, #1e88e5, #673ab7);
+      color: white;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow:  4px 15px rgba(, , , .3);
+      z-index: 9999;
+      display: none;
+      animation: slideIn .5s ease;
+    }
+
+    .welcome-banner h3 {
+      margin:   8px;
+      font-size: 20px;
+    }
+
+    .welcome-banner p {
+      margin:   12px;
+      font-size: 15px;
+    }
+
+    .welcome-banner button {
+      background: white;
+      color: #1e88e5;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: ;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX();
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-banner" id="welcomeBanner">
+    <h3 id="noticeTitle"></h3>
+    <p id="noticeBody"></p>
+    <button onclick="closeBanner()">إغلاق</button>
+  </div>
+
+  <script>
+    const config = {
+      "serverstatus": "true",
+      "noticemode": "true",
+      "dataclearmode": "false",
+      "servermeassage": "Wait We Are Working On a new Update ! @MASOOM_MODS",
+      "opentime": " Wait For Some Time ⚡",
+      "libs": "https://github.com/chinwi88/onlinenegm/raw/refs/heads/main/libstophrim.zip",
+      "notice_title": "Welcome To Vip Mod",
+      "notice_body": "@MASOOM_MODS"
+    };
+
+    window.onload = function () {
+      if (config.noticemode === "true") {
+        document.getElementById("noticeTitle").innerText = config.notice_title;
+        document.getElementById("noticeBody").innerText = config.notice_body;
+        document.getElementById("welcomeBanner").style.display = "block";
+      }
+    };
+
+    function closeBanner() {
+      document.getElementById("welcomeBanner").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
